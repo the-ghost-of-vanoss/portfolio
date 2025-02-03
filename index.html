@@ -1,58 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <img src="vanoss.jfif" alt="Roy Alastair B. Parungao" style="width: 150px; border-radius: 50%;">
-    <p>Roy Alastair B. Parungao</p>
-    <p>Information Communication Technology - (ICT) Student</p>
-</head>
-<body>
+                <title>Personal Portfolio</title>
+                <link rel="stylesheet" href="style.css">
+            </head>
+            <body> 
+                <header>
+                    <nav>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#hobbies">Hobbies</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header-content">
+                        <img src="vanoss.jfif" alt="vanoss">
+                        <h1>Hi, my name is Roy Alastair B. Parungao</h1>
+                    </div>
+                </header>
+                <main>
+                    <section id="about">
+                        <h2>~ About Me ~</h2>
+                        <img src="vanoss.jfif" alt="Roy Alastair B. Parungao profile" class="profile-picture">
+                        <p>Hello! I'm Roy Alastair B. Parungao, I'm from Novaliches Quezon City, I am a grade - 12 student of Jordan Woods Academy - (JWA), I'm an ICT student with a few experiences about coding, I like sketching cartoon characters and animating them, I'm also a trainee of CQB.</p>
+                    </section>
+                    <section id="hobbies">
+                        <h2>~ Hobbies ~</h2>
+                        <div class="hobby" id="sketching-animation">Sketching & Animation</div>
+                         
+                        <div class="hobby" id="cooking">Cooking</div>
+                        
+                        <div class="hobby" id="wood-carpentry">Wood Carpentry</div>
+                        
+                        <div class="hobby" id="cqb-cbc-tactics">CQB & CBC Tactics</div>
+                        
+                    </section>
+                    <section id="contact">
+                        <h2>~ Keep in Touch ~</h2>
+                        <button class="btn btn-default td-btn outline white">Send me a message!</button>
+                    </section>
+                </main>
+                <footer>
+                    <p>Copyright © 2025 Vanoss — All Rights Reserved</p>
+                </footer>
+            </body>
+        <script>
+            const toggleButton = document.createElement('button');
+            toggleButton.textContent = 'dark mode';
+            document.body.appendChild(toggleButton);
 
-    <header>
-        <h1>My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#hobbies">Hobbies</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+            toggleButton.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+            });
 
-    <section id="about">
-    <h2>About Me:</h2>
-    <p>Hello! Im Roy Alastair B. Parungao, Im from Novaliches Quezon City, I am a grade - 12 student of Jordan Woods Academy - (JWA), Im a ICT student with a few experience about codings, I like sketching cartoon characters and animate them, Im also a trainee of CQB's.</p>
-    </section>
+            const style = document.createElement('style');
+            style.textContent = `
+                .dark-mode {
+                    background-color: #121212;
+                    color: #ffffff;
+                }
+                .dark-mode a {
+                    color: #bb86fc;
+                }
+                .dark-mode .header-content img,
+                        .dark-mode .profile-picture {
+                            filter: brightness(0.8);
+                        }
+                    `;
+                document.head.appendChild(style);
+                </script>
 
-    <section id="hobbies">
-        <div class="hobbies">
-            <h3>Hobbies</h3>
-            <p>I like to sketch cartoon characters and animate them</p>
-            <p>I demonstrate CQB's tactics and techniques</p> 
-            <p>I like wood carpentry</p>
-            <p>I also like to ride a bike and explore places</p>
-
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me:</h2>
-        <p>Email: royalastairp@gmail.com</p>
-        <p>Facebook: Roy Alastair B. Parungao</p>
-        <p>Phone Number: 0919-506-5502</p>
-    </section>
-
-</body>
-</html>
 <style>
     body {
-        background-color: rgb(252, 252, 252);
-        background-image: url("images/images.jpg");
+        text-align: center;
+    }
+    header nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+    }
+    header nav ul li {
+        margin: 0 15px;
+    }
+    .header-content {
+        text-align: center;
+    }
+    main {
+        text-align: center;
+    }
+    .hobby {
+        margin: 10px 0;
+    }
+    footer {
+        text-align: center;
+    }
+</style>
+
+<style>
+    .hobby img {
+        display: block;
+        margin: 10px auto;
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+<style>
+    #sketching-animation {
+        background-image: url('8d1ee20d28efc61eb0ded2be7843f076.jpg');
         background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+        height: 20%;
+    }
+    #cooking {
+        background-image: url('images/OIP.jpg');
+        background-size: cover;
+        height: 20%;
+    }
+
+    #wood-carpentry {
+        background-image: url('images/carpentry-hyde-park-utah-scaled.jpg');
+        background-size: cover;
+        height: 20%;
+        
+    }
+    #cqb-cbc-tactics {
+        background-image: url('images/R.jpg');
+        background-size: 20%;
+        height: 20%;
+<!-- Removed duplicate style -->
     }
 </style>
